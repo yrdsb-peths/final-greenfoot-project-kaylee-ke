@@ -21,7 +21,14 @@ public class MyWorld extends World
         Rocket rocket = new Rocket();
         addObject(rocket, 55, 200);
         
+        createMeteorite1();
+    }
+    
+    public void createMeteorite1()
+    {
         Meteorite meteorite = new Meteorite();
-        addObject(meteorite, 200, 300);
+        int x = 100;
+        int y = Greenfoot.getRandomNumber(400);
+        addObject(meteorite, x, y);
     }
 }
