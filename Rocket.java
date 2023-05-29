@@ -14,7 +14,22 @@ public class Rocket extends Actor
      */
     public void act()
     {
-        // Add your action code here.
-        move(1);
+        // move the rocket.
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
+        else if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY()-1);
+        }
+        else if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY()+1);
+        }
     }
 }
