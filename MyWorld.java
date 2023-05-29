@@ -20,5 +20,8 @@ public class MyWorld extends World
         
         Rocket rocket = new Rocket();
         addObject(rocket, 55, 200);
+        
+        Meteorite meteorite = new Meteorite();
+        addObject(meteorite, 200, 300);
     }
 }
