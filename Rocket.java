@@ -17,19 +17,29 @@ public class Rocket extends Actor
         // move the rocket.
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-1);
+            move(-2);
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(1);
+            move(2);
         }
         else if(Greenfoot.isKeyDown("up"))
         {
-            setLocation(getX(), getY()-1);
+            setLocation(getX(), getY()-2);
         }
         else if(Greenfoot.isKeyDown("down"))
         {
-            setLocation(getX(), getY()+1);
+            setLocation(getX(), getY()+2);
+        }
+        
+        checkCollision();
+    }
+    
+    private void checkCollision()
+    {
+        if(isTouching(Meteorite.class)||isTouching(Meteorite2.class)||isTouching(Meteorite3.class)||isTouching(Meteorite4.class)||isTouching(Meteorite5.class)||isTouching(Meteorite.class))
+        {
+            Greenfoot.stop();
         }
     }
 }
