@@ -19,7 +19,7 @@ public class MyWorld extends World
         super(600, 400, 1);
         
         Rocket rocket = new Rocket();
-        addObject(rocket, 55, 200);
+        addObject(rocket, 15, 200);
         
         createMeteorite1();
         createMeteorite2();
