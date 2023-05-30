@@ -22,12 +22,21 @@ public class MyWorld extends World
         addObject(rocket, 55, 200);
         
         createMeteorite1();
+        createMeteorite2();
     }
     
     public void createMeteorite1()
     {
         Meteorite meteorite = new Meteorite();
         int x = 100;
+        int y = Greenfoot.getRandomNumber(400);
+        addObject(meteorite, x, y);
+    }
+    
+    public void createMeteorite2()
+    {
+        Meteorite meteorite = new Meteorite();
+        int x = 150;
         int y = Greenfoot.getRandomNumber(400);
         addObject(meteorite, x, y);
     }

@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * the meteorite
+ * Write a description of class Meteorite2 here.
  * 
- * @Kaylee Ke 
- * @May 29
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Meteorite extends Actor
+public class Meteorite2 extends Actor
 {
     /**
-     * Act - do whatever the Meteorite wants to do. This method is called whenever
+     * Act - do whatever the Meteorite2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int speed = 1;
