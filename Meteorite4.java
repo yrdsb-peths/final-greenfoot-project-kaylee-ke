@@ -8,14 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 */
 public class Meteorite4 extends Actor
 {
-    /**
-     * Act - do whatever the Meteorite4 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootImage idle = new GreenfootImage("stars/tile005.png");
     private int speed = 1;
+    public Meteorite4()
+    {
+        idle.scale(70,85);
+        setImage(idle);
+    }
+    
     public void act()
     {
-        moveUpDown();
+         moveUpDown();
     }
     
     public void moveUpDown()
