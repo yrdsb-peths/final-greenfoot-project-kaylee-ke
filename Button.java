@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * get to the next level when the rocket hits the button
+ * get to the winning screen when the rocket hits the button
  * 
  * @Kaylee Ke 
  * @June 1

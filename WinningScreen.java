@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WinningScreen here.
+ * switch to this screen when the rocket hits the button
  * 
  * @Kaylee Ke
  * @June 1
