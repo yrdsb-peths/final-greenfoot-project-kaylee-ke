@@ -63,6 +63,11 @@ public class Rocket extends Actor
         
         checkCollision();
         animateRocket();
+        
+        if(isTouching(Button.class))
+        {
+            switchToWorld();
+        }
     }
     
     private void checkCollision()
@@ -71,5 +76,11 @@ public class Rocket extends Actor
         {
             Greenfoot.stop();
         }
+    }
+    
+    private void switchToWorld()
+    {
+        World newWorld = new WinningScreen();
+        Greenfoot.setWorld(newWorld);
     }
 }

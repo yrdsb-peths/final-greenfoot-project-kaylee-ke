@@ -26,6 +26,7 @@ public class MyWorld extends World
         createMeteorite3();
         createMeteorite4();
         createMeteorite5();
+        createButton();
     }
     
     public void createMeteorite1()
@@ -66,5 +67,14 @@ public class MyWorld extends World
         int x = 500;
         int y = Greenfoot.getRandomNumber(400);
         addObject(meteorite5, x, y);
+    }
+    
+    public void createButton()
+    {
+        Button button = new Button();
+        //get a random number between 500 and 600
+        int x = Greenfoot.getRandomNumber(101) + 500;
+        int y = Greenfoot.getRandomNumber(400);
+        addObject(button, x, y);
     }
 }
