@@ -8,10 +8,39 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rocket extends Actor
 {
+    GreenfootImage[] idle = new GreenfootImage[6];
+    SimpleTimer animationTimer = new SimpleTimer();
+    
     /**
-     * Act - do whatever the Rocket wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * constructor
      */
+    public Rocket()
+    {
+        for(int i=0; i<idle.length; i++)
+        {
+            idle[i] = new GreenfootImage("rockets/image"+i+".png");
+        }
+        setImage(idle[0]);
+        
+        animationTimer.mark();
+    }
+    
+    /**
+     * animate the rocket
+     */
+    int imageIndex = 0;
+    public void animateRocket()
+    {
+        if(animationTimer.millisElapsed()<200)
+        {
+            return;
+        }
+        animationTimer.mark();
+        
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
+    
     public void act()
     {
         // move the rocket.
@@ -33,6 +62,7 @@ public class Rocket extends Actor
         }
         
         checkCollision();
+        animateRocket();
     }
     
     private void checkCollision()
