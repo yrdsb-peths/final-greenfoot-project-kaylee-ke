@@ -12,7 +12,7 @@ public class Meteorite4 extends Actor
     private int speed = 1;
     public Meteorite4()
     {
-        idle.scale(70,85);
+        idle.scale(50,50);
         setImage(idle);
     }
     
