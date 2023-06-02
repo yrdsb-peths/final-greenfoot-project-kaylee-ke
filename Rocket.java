@@ -61,12 +61,15 @@ public class Rocket extends Actor
             setLocation(getX(), getY()+2);
         }
         
+        //switch to over screen when rocket touches the meteorite
         checkCollision();
+        
         animateRocket();
         
+        //switch to winning screen when rocket touches the button
         if(isTouching(Button.class))
         {
-            switchToWorld();
+            switchToWinningWorld();
         }
     }
     
@@ -74,13 +77,19 @@ public class Rocket extends Actor
     {
         if(isTouching(Meteorite.class)||isTouching(Meteorite2.class)||isTouching(Meteorite3.class)||isTouching(Meteorite4.class)||isTouching(Meteorite5.class)||isTouching(Meteorite.class))
         {
-            Greenfoot.stop();
+            switchToOverWorld();
         }
     }
     
-    private void switchToWorld()
+    private void switchToWinningWorld()
     {
         World newWorld = new WinningScreen();
+        Greenfoot.setWorld(newWorld);
+    }
+    
+    private void switchToOverWorld()
+    {
+        World newWorld = new OverScreen();
         Greenfoot.setWorld(newWorld);
     }
 }

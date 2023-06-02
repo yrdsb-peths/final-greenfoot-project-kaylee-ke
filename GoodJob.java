@@ -15,7 +15,7 @@ public class GoodJob extends Actor
         image.scale(450,150);
         setImage(image);
         
-        //press 9 to continue, press 0 to end the game
+        //press 9 to continue, press 0 to end the game (switch ro the end screen)
         checkKeyPress();
     }
     
@@ -27,7 +27,7 @@ public class GoodJob extends Actor
         }
         else if(Greenfoot.isKeyDown("0"))
         {
-            Greenfoot.stop();
+            switchToWorld(new OverScreen());
         }
     }
     
