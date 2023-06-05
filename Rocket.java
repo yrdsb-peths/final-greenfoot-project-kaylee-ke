@@ -10,6 +10,8 @@ public class Rocket extends Actor
 {
     GreenfootImage[] idle = new GreenfootImage[6];
     SimpleTimer animationTimer = new SimpleTimer();
+    GreenfootSound collisionSound = new GreenfootSound("sounds/PUNCH.mp3");
+    GreenfootSound successSound = new GreenfootSound("sounds/success sound.mp3");
     
     /**
      * constructor
@@ -69,6 +71,7 @@ public class Rocket extends Actor
         //switch to winning screen when rocket touches the button
         if(isTouching(Button.class))
         {
+            successSound.play();
             switchToWinningWorld();
         }
     }
@@ -77,6 +80,7 @@ public class Rocket extends Actor
     {
         if(isTouching(Meteorite.class)||isTouching(Meteorite2.class)||isTouching(Meteorite3.class)||isTouching(Meteorite4.class)||isTouching(Meteorite5.class)||isTouching(Meteorite.class))
         {
+            collisionSound.play();
             switchToOverWorld();
         }
     }
