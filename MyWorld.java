@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private GreenfootSound backgroundMusic;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -17,6 +18,9 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+        backgroundMusic = new GreenfootSound("sounds/background music.mp3");
+        Greenfoot.start();
+        backgroundMusic.playLoop();
         
         Rocket rocket = new Rocket();
         addObject(rocket, 15, 200);
@@ -28,6 +32,7 @@ public class MyWorld extends World
         createMeteorite5();
         createButton();
     }
+    
     
     public void createMeteorite1()
     {

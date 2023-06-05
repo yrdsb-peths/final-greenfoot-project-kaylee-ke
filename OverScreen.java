@@ -20,4 +20,9 @@ public class OverScreen extends World
         GameOver over = new GameOver();
         addObject(over, 300, 200);
     }
+    
+    public void act()
+    {
+        Greenfoot.stop();
+    }
 }
