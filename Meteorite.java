@@ -10,9 +10,11 @@ public class Meteorite extends Actor
 {
     GreenfootImage idle = new GreenfootImage("stars/tile002.png");
     private int speed = 1;
+    public static int size = 40;
+    
     public Meteorite()
     {
-        idle.scale(50,50);
+        idle.scale(size,size);
         setImage(idle);
     }
     

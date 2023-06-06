@@ -19,10 +19,10 @@ public class OverScreen extends World
         super(600, 400, 1); 
         GameOver over = new GameOver();
         addObject(over, 300, 200);
-    }
-    
-    public void act()
-    {
-        Greenfoot.stop();
+        Meteorite.size = 40;
+        Meteorite2.size = 40;
+        Meteorite3.size = 40;
+        Meteorite4.size = 40;
+        Meteorite5.size = 40;
     }
 }

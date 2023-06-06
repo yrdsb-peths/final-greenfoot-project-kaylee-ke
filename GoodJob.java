@@ -24,6 +24,11 @@ public class GoodJob extends Actor
         if(Greenfoot.isKeyDown("9"))
         {
             switchToWorld(new MyWorld());
+            Meteorite.size += 10;
+            Meteorite2.size += 10;
+            Meteorite3.size += 10;
+            Meteorite4.size += 10;
+            Meteorite5.size += 10;
         }
         else if(Greenfoot.isKeyDown("0"))
         {
