@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Game Over label
  * 
- * @Kaylee Ke
- * @June 2
+ * @ Kaylee Ke
+ * @ June 2
  */
 public class GameOver extends Actor
 {

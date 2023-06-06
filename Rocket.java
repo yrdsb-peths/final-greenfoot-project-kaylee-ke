@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The rocket.
  * 
- * @Kaylee Ke 
- * @May 29
+ * @ Kaylee Ke 
+ * @ May 29
  */
 public class Rocket extends Actor
 {
@@ -27,10 +27,10 @@ public class Rocket extends Actor
         animationTimer.mark();
     }
     
+    int imageIndex = 0;
     /**
      * animate the rocket
      */
-    int imageIndex = 0;
     public void animateRocket()
     {
         if(animationTimer.millisElapsed()<200)

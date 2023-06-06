@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * continue or end the game
  * 
- * @Kaylee Ke 
- * @June 2
+ * @ Kaylee Ke 
+ * @ June 2
  */
 public class GoodJob extends Actor
 {
@@ -24,6 +24,8 @@ public class GoodJob extends Actor
         if(Greenfoot.isKeyDown("9"))
         {
             switchToWorld(new MyWorld());
+            
+            //increase the meteorites size every time player switches back to the main world
             Meteorite.size += 10;
             Meteorite2.size += 10;
             Meteorite3.size += 10;

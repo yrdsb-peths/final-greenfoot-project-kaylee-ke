@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class OverScreen here.
+ * the game over screen
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @ Kaylee Ke
+ * @ June 2
  */
 public class OverScreen extends World
 {
@@ -19,6 +19,8 @@ public class OverScreen extends World
         super(600, 400, 1); 
         GameOver over = new GameOver();
         addObject(over, 300, 200);
+        
+        //resize the meteorites to the original value after game is over
         Meteorite.size = 40;
         Meteorite2.size = 40;
         Meteorite3.size = 40;

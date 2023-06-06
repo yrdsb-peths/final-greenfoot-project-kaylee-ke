@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * the meteorite
  * 
- * @Kaylee Ke 
- * @May 29
+ * @ Kaylee Ke 
+ * @ May 29
  */
 public class Meteorite extends Actor
 {

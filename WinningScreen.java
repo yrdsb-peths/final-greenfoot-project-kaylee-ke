@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * switch to this screen when the rocket hits the button
  * 
- * @Kaylee Ke
- * @June 1
+ * @ Kaylee Ke
+ * @ June 1
  */
 public class WinningScreen extends World
 {

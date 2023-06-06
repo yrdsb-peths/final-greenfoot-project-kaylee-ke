@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * the sky
+ * the main world
  * 
- * @Kaylee Ke
- * @May 29
+ * @ Kaylee Ke
+ * @ May 29
  */
 public class MyWorld extends World
 {
@@ -19,6 +19,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+        
         backgroundMusic = new GreenfootSound("sounds/background music.mp3");
         isMusicPlaying = false;
         
@@ -33,6 +34,9 @@ public class MyWorld extends World
         createButton();
     }
     
+    /**
+     * start to play the background music when the player enters the main world
+     */
     public void act()
     {
         if(!isMusicPlaying)
