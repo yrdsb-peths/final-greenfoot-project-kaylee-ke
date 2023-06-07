@@ -8,39 +8,59 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rocket extends Actor
 {
-    GreenfootImage[] idle = new GreenfootImage[6];
+    GreenfootImage[] idleRight = new GreenfootImage[6];
+    GreenfootImage[] idleLeft = new GreenfootImage[6];
+    
     SimpleTimer animationTimer = new SimpleTimer();
+    
     GreenfootSound collisionSound = new GreenfootSound("sounds/PUNCH.mp3");
     GreenfootSound successSound = new GreenfootSound("sounds/success sound.mp3");
+    
+    //direction the rocket is facing
+    String facing = "right";
     
     /**
      * constructor
      */
     public Rocket()
     {
-        for(int i=0; i<idle.length; i++)
+        for(int i=0; i<idleRight.length; i++)
         {
-            idle[i] = new GreenfootImage("rockets/image"+i+".png");
+            idleRight[i] = new GreenfootImage("rockets/image"+i+".png");
         }
-        setImage(idle[0]);
         
-        animationTimer.mark();
+        for(int i=0; i<idleLeft.length; i++)
+        {
+            idleLeft[i] = new GreenfootImage("rockets/image"+i+".png");
+            idleLeft[i].mirrorHorizontally();
+        }
+        setImage(idleRight[0]);
     }
     
-    int imageIndex = 0;
     /**
      * animate the rocket
      */
+    int imageIndex = 0;
     public void animateRocket()
     {
+        //adjust the speed of the animation
         if(animationTimer.millisElapsed()<200)
         {
             return;
         }
         animationTimer.mark();
         
-        setImage(idle[imageIndex]);
-        imageIndex = (imageIndex + 1) % idle.length;
+        //mirror the rocket
+        if(facing.equals("right"))
+        {
+            setImage(idleRight[imageIndex]);
+            imageIndex= (imageIndex + 1) % idleRight.length;
+        }
+        else
+        {
+            setImage(idleLeft[imageIndex]);
+            imageIndex= (imageIndex + 1) % idleLeft.length;
+        }
     }
     
     public void act()
@@ -49,10 +69,12 @@ public class Rocket extends Actor
         if(Greenfoot.isKeyDown("left"))
         {
             move(-2);
+            facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
             move(2);
+            facing = "right";
         }
         else if(Greenfoot.isKeyDown("up"))
         {
