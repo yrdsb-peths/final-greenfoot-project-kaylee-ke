@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
-    Label labelOne = new Label("use up, down, left and right to move", 30);
-    Label labelTwo = new Label("press space to start the game.", 30);
+    Label labelOne = new Label("use ↑, ↓ , ← and → to move", 30);
+    Label labelTwo = new Label("press <space> to start the game.", 30);
     
     private MyWorld myWorld;
     private Rocket rocket;
