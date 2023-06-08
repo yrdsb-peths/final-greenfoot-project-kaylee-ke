@@ -18,6 +18,7 @@ public class WinningScreen extends World
         createLabel();
         addObject(labelOne, 300, 270);
         addObject(labelTwo, 300, 330);
+        
     }
     
     public void createLabel()

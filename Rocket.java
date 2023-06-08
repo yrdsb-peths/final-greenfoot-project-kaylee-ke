@@ -70,11 +70,15 @@ public class Rocket extends Actor
         {
             move(-2);
             facing = "left";
+            MyWorld world = (MyWorld) getWorld();
+            world.decreaseScore();
         }
         else if(Greenfoot.isKeyDown("right"))
         {
             move(2);
             facing = "right";
+            MyWorld world = (MyWorld) getWorld();
+            world.increaseScore();
         }
         else if(Greenfoot.isKeyDown("up"))
         {

@@ -10,6 +10,8 @@ public class MyWorld extends World
 {
     private GreenfootSound backgroundMusic;
     private boolean isMusicPlaying;
+    public int score = 0;
+    Label scoreLabel;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -26,12 +28,33 @@ public class MyWorld extends World
         Rocket rocket = new Rocket();
         addObject(rocket, 15, 200);
         
+        scoreLabel = new Label(0, 30);
+        addObject(scoreLabel, 20, 20);
+        
         createMeteorite1();
         createMeteorite2();
         createMeteorite3();
         createMeteorite4();
         createMeteorite5();
         createButton();
+    }
+    
+    /**
+     * increase score
+     */
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
+    }
+    
+    /**
+     * decrease score
+     */
+    public void decreaseScore()
+    {
+        score--;
+        scoreLabel.setValue(score);
     }
     
     /**
