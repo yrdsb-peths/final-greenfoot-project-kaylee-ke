@@ -39,6 +39,13 @@ public class MyWorld extends World
         createButton();
     }
     
+    public void ToWinning()
+    {
+        WinningScreen winningScreen = new WinningScreen();
+        winningScreen.setTheValue(score);
+        Greenfoot.setWorld(winningScreen);
+    }
+    
     /**
      * increase score
      */
