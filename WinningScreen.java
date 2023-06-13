@@ -10,8 +10,8 @@ public class WinningScreen extends World
 {
     Label labelOne = new Label("press 9 to continue;", 30);
     Label labelTwo = new Label("press 0 to end the game.", 30);
-    Label scoreLabel;
-    public int score;
+    //Label scoreLabel;
+    //public int score;
     
     public WinningScreen()
     {
@@ -22,15 +22,15 @@ public class WinningScreen extends World
         addObject(labelOne, 300, 300);
         addObject(labelTwo, 300, 350);
         
-        scoreLabel = new Label(score, 45);
-        addObject(scoreLabel, 300, 250);
+        //scoreLabel = new Label(score, 45);
+        //addObject(scoreLabel, 300, 250);
     }
     
-    public int setTheValue(int variable)
-    {
-        score = variable;
-        return score;
-    }
+    //public int setTheValue(int variable)
+    //{
+      //  score = variable;
+        //return score;
+    //}
     
     public void createLabel()
     {
